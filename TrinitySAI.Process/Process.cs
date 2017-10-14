@@ -12,10 +12,11 @@ using Trinity.DB;
 
 namespace TrinitySAI
 {
-    public class Process
+    public partial class Process
     {
         private TrinityDB Db;
         private Config config;
+        private EventInfo[] EventTable;
 
         public Process(Config data)
         {
@@ -46,6 +47,30 @@ namespace TrinitySAI
                 return;
 
             ConnectDb(serverInfo.Username, serverInfo.Password, serverInfo.Database, serverInfo.Hostname);
+        }
+
+        public void LoadEvents()
+        {
+            var eventList = new List<EventInfo>();
+            var results = GetConfigDataByTypeQuery(1);
+            foreach (var row in results)
+            {
+                var ev = new EventInfo();
+                ev.EventId = (UInt32)row.config_key;
+                ev.EventName = row.config_name;
+                ev.ParamName1 = row.param1_name;
+                ev.ParamName2 = row.param2_name;
+                ev.ParamName3 = row.param3_name;
+                ev.ParamName4 = row.param4_name;
+                ev.AllowedFlagMask = (UInt32)row.valid_flags;
+                ev.IsHidden = row.hidden;
+                eventList.Add(ev);
+            }
+
+            UInt32 maxEvent = eventList.OrderByDescending(line => line.EventId).Select(line => line.EventId).FirstOrDefault();
+            EventTable = new EventInfo[maxEvent+1];
+            foreach (var entry in eventList)
+                EventTable[entry.EventId] = entry;
         }
 
         public string TestQuery()

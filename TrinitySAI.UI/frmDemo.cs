@@ -31,6 +31,7 @@ namespace TrinitySAI.UI
         {
             config.Load();
             sai.ConnectDb(2);
+            sai.LoadEvents();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

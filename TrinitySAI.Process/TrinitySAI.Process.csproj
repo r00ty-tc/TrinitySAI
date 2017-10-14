@@ -63,6 +63,8 @@
     <Compile Include="Config.cs" />
     <Compile Include="Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries.cs" />
+    <Compile Include="Structures.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Trinity.DB\Trinity.DB.csproj">
