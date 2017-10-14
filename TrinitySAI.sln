@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrinitySAI.UI", "TrinitySAI.UI\TrinitySAI.UI.csproj", "{AAD4EAE4-125A-4D63-BBBD-9B81EBA277C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrinitySAI.DB", "TrinitySAI.DB\TrinitySAI.DB.csproj", "{1591975F-2FB2-476C-BD42-9FB9AE1DA32A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trinity.DB", "Trinity.DB\Trinity.DB.csproj", "{1591975F-2FB2-476C-BD42-9FB9AE1DA32A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrinitySAI.Process", "TrinitySAI.Process\TrinitySAI.Process.csproj", "{4948B791-4CCF-4F50-AAB7-19A102DA3C1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1591975F-2FB2-476C-BD42-9FB9AE1DA32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1591975F-2FB2-476C-BD42-9FB9AE1DA32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1591975F-2FB2-476C-BD42-9FB9AE1DA32A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4948B791-4CCF-4F50-AAB7-19A102DA3C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4948B791-4CCF-4F50-AAB7-19A102DA3C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4948B791-4CCF-4F50-AAB7-19A102DA3C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4948B791-4CCF-4F50-AAB7-19A102DA3C1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

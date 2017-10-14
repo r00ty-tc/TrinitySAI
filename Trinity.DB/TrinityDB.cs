@@ -1,3 +1,5 @@
+using System.Data.Common;
+
 namespace Trinity.DB
 {
     using System;
@@ -10,6 +12,11 @@ namespace Trinity.DB
         public TrinityDB()
             : base("name=TrinityDB")
         {
+        }
+
+        public TrinityDB(DbConnection dbCon) : base(dbCon, true)
+        {
+            
         }
 
         public virtual DbSet<access_requirement> access_requirement { get; set; }
